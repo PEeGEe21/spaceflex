@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="HTML, Meta Tags, Metadata" />
+    <meta name="description" content="SPACEFLEX home page." />
+    <meta name="revised" content="SPACEFLEX, 7/10/2019" />
+    <meta http-equiv="refresh" content="86400" /> 
+    <meta name="author" content="Udeh PraiseGod" />
+    
+    
+    <script src="Bootstrap/js/jquery-3.1.1.min.js"></script>
+
+
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- STYLESHEET -->
+    <!--<link href="vendors/MDB/css/mdb.css" rel="stylesheet"/>-->
+    <link href="vendors/bootstrap-dropmenu-master/dist/stylesheets/bootstrap-dropmenu.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css">
+    <link href="vendors/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="vendors/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css">
+    <link href="vendors/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+
+    <link href="vendors/slick-1.8.1/slick/slick.css" rel="stylesheet" type="text/css" />
+    <link href="Bootstrap/Bootstrap4/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+
+
+
+
+
+    <link href="wow/animate.css" rel="stylesheet" type="text/css">
+    <link href="vendors/animate.css/animate.css" rel="stylesheet" type="text/css" />
+
+    <link href="buttons.css" rel="stylesheet" type="text/css">
+    <link href="loginstyle.css" rel="stylesheet" type="text/css">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+
+        /* ===================================================================
+ * # contact - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+
+
+
+        .s-contact .btn.full-width, .s-contact button.full-width {
+            width: 100%;
+            margin-right: 0;
+        }
+        /*.contact__form .btn.btn--primary,
+        .contact__form button.btn--primary,
+        .contact__form input[type="submit"].btn--primary,
+        .contact__form input[type="reset"].btn--primary,
+        .contact__form input[type="button"].btn--primary {
+            background: #0D0A0B;
+            border-color: #0D0A0B;
+            color: #FFFFFF;
+        }*/
+        .full-width {
+            width: 100%;
+        }
+
+        .contact__form .btn,
+        .contact__form button,
+        .contact__form input[type="submit"],
+        .contact__form input[type="reset"],
+        .contact__form input[type="button"] {
+            display: inline-block;
+            font-family: "montserrat-semibold", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            height: 5.4rem;
+            line-height: calc(5.4rem - .6rem);
+            padding: 0 3rem;
+            margin: 0 .3rem 1.2rem 0;
+            color: #151515;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #c5c5c5;
+            border: .3rem solid #c5c5c5;
+        }
+
+
+        .s-contact {
+            background-color: #151515;
+            background-image: url("../images/IMG_sgo07y.jpg");
+            background-repeat: no-repeat;
+            background-position: center, center;
+            padding-top: 8rem;
+            padding-bottom: 12rem;
+            color: rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+
+        .s-contact .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .75;
+            background-color: #070606;
+        }
+
+        .s-contact .section-intro h1 {
+            color: #FFFFFF;
+        }
+
+        .s-contact .section-intro p {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .s-contact .section-intro.has-bottom-sep::after {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .s-contact .form-field {
+            position: relative;
+        }
+
+        .s-contact .form-field:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .s-contact .form-field label {
+            font-family: "montserrat-semibold", sans-serif;
+            font-size: 1em;
+            line-height: 2.4rem;
+            position: absolute;
+            bottom: 2rem;
+            right: .6rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            padding: 0 2rem;
+            margin: 0;
+            color: #FFFFFF;
+            background: #862121;
+        }
+        @media screen and (max-width: 992px) {
+            .s-contact .form-field label {
+
+                bottom: -0.2rem;
+                right: .6rem;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+
+            }
+        }@media screen and (max-width: 768px) {
+            .contact__infos {
+                margin-top: 30px
+            }
+        }@media screen and (max-width: 575px) {
+            .contact__infos{
+                margin-top: 30px
+            }
+            .contact__form input[type="email"],
+            .contact__form input[type="number"],
+            .contact__form input[type="text"],
+            .contact__form input[type="tel"],
+            .contact__form input[type="url"],
+            .contact__form textarea {
+                background-color: transparent;
+                border-right: 0px;
+                border-left: 0px;
+                border-top:0px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin-bottom: 7em;
+                color: rgba(255, 255, 255, 0.75);
+            }
+        }
+        .s-contact .form-field label::after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            margin-top: -6px;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid #862121;
+        }
+
+        .contact__main {
+            /*max-width: 900px;*/
+            position: relative;
+        }
+
+        .contact__main h4 {
+            color: #FFFFFF;
+        }
+
+        .contact__infos {
+            font-size: 1.5rem;
+        }
+
+        .contact__form {
+            /*padding-right: 40px;*/
+        }
+
+
+        .contact__form input[type="email"]:focus,
+        .contact__form input[type="number"]:focus,
+        .contact__form input[type="text"]:focus,
+        .contact__form input[type="tel"]:focus,
+        .contact__form input[type="url"]:focus,
+        .contact__form textarea:focus {
+            background: transparent;
+            color: white;
+            outline: none;
+            border-top: 0px solid white;
+            border-right: 0px solid white;
+            border-left: 0px solid white;
+            border-bottom: 1px solid white;
+            transition: 1s ease-in-out;
+        }
+
+
+
+        .contact__form button {
+            margin-top: 4.2rem;
+            background-color: #862121;
+            border-color: #862121;
+        }
+        .contact__form button:hover {
+            background-color: #862121;
+            border-color: #862121;
+            color: #fff
+        }
+
+        .contact__form button:focus {
+            background-color: #862121;
+            border-color: #862121;
+            color: #fff;
+            outline:none
+                }
+
+        .message-warning, .message-success {
+            display: none;
+            background: #0D0A0B;
+            font-size: 1.5rem;
+            line-height: 2;
+            padding: 3rem;
+            margin-bottom: 3.6rem;
+            width: 100%;
+        }
+
+        .message-warning {
+            color: #ff6163;
+        }
+
+        .message-success {
+            color: #008C2C;
+        }
+
+        .message-warning i, .message-success i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+
+        /* form loader */
+
+        .submit-loader {
+            display: none;
+            position: relative;
+            left: 0;
+            top: 1.8rem;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 4.2rem;
+        }
+
+        .submit-loader .text-loader {
+            display: none;
+            font-family: "montserrat-bold", sans-serif;
+            font-size: 1.4rem;
+            color: #FFFFFF;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+        }
+
+        .oldie .submit-loader .s-loader {
+            display: none;
+        }
+
+        .oldie .submit-loader .text-loader {
+            display: block;
+        }
+
+        .contact__form input[type="email"],
+        .contact__form input[type="number"],
+        .contact__form input[type="text"],
+        .contact__form input[type="tel"],
+        .contact__form input[type="url"],
+        .contact__form textarea {
+            background-color: transparent;
+            border-right: 0px;
+            border-left: 0px;
+            border-top:0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 3em;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+
+        .contact-info-bx{
+            padding: 30px;
+            background:#834d9b;
+            /*background: linear-gradient(to right,  #834d9b, #d04ed6);*/
+        }
+
+        .contact-info-bx .widget i{
+            font-size: 18px;
+            line-height: 16px;
+            margin-right: 20px;
+
+        }
+
+        .contact-info-bx ul li{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 14px;
+        }
+        .contact-social-bx a{
+            border-radius: 100%;
+        }
+
+        .contact-info-bx .widget{
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            padding-bottom: 0;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-bottom:20px;
+        }
+
+         .widget ul  li > span{
+
+            margin-left:10px;
+
+        }
+
+    </style>
+</head>
+<body id="bg" class="kt-scrolltop--on">
+<!-- 1. Top Bar -->
+<div class="top-bar" style="background: #eee;">
+    <div class="container">
+        <div class="top-header">
+            <div class="row">
+                <div class="col-12">
+                    <div class="top-link-left">
+                        <p><a href="mailto:mailpraiseudeh@gmail.com"><i class="fa fa-envelope"></i>&nbsp;<span>mailpraiseudeh@gmail.com</span></a></p>
+                        <p class="contact"><a href="tel:+2349028950691"><i class="fa fa-phone"></i>&nbsp;<span>+234&nbsp;9028950691</span></a></p>
+                    </div>
+                    <div class="top-link-right">
+                        <p><a href=""><i class="fa fa-video"></i> Live&nbsp;Chat</a></p>
+                        <p class="contact-login"><a href="#" onclick="openSearch()"><i class="fa fa-user-plus "></i>&nbsp;Login</a></p>
+                        <p><a href="">Report <i class="fa fa-comment "></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 2. HEADER -->
+<header class="sticky-top header">
+    <div class="navbar navbar-expand-lg navbar-dark sticky-top" style=" ">
+        <div class="container-fluid">
+            <a href="Index.html"><div class="navbar-brand animated infinite pulse" data-wow-iteration="2000">SPACEFLEX</div></a>
+
+
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" data-toggle="collapse" data-target="#navbarNavDropdown"
+                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+
+
+            <div class="collapse navbar-collapse menu-links" id="navbarNavDropdown">
+
+
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item mr-3"><a href="Index.html" class="nav-link"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+
+                    <li class="nav-item mr-3 dropdown">
+
+                        <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Domain</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="register.html" class="dropdown-item">Create Account</a></li>
+                            <li><a href="login.html" class="dropdown-item">Login1</a></li>
+                            <li><a href="#" class="dropdown-item" onclick="openSearch()">Login2</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item mr-3 dropdown" >
+
+                        <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hosting
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                            <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                            <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item mr-3"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item mr-3"><a href="" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="" class="nav-link active">Contact</a></li>
+                    <li class="nav-item viewCart"><a href="" class="nav-link"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+<section id="contact" class="s-contact target-section ">
+<div class="container">
+    <div class="overlay"></div>
+
+    <div class="row section-intro text-center">
+        <div class="col-12">
+            <h3>Contact</h3>
+            <h1>Say Hello.</h1>
+
+            <p class="mb-4">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
+        </div>
+    </div>
+
+    <div class="row contact__main text-left mt-4">
+        <div class="col-sm-12 col-md-12 col-lg-6 tab-full contact__form">
+            <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                <fieldset>
+
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <!-- contact-warning -->
+            <div class="message-warning">
+                Something went wrong. Please try again.
+            </div>
+
+            <!-- contact-success -->
+            <div class="message-success">
+                Your message was sent, thank you!<br>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 tab-full contact__infos">
+            <div class=" text-white contact-info-bx">
+                <h3 class="mb-2 title-head">Contact <span>Information</span></h3>
+                <h6 class="mb-4 mt-4">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute,</h6>
+
+
+            <div class="widget">
+                <ul class="list-unstyled ">
+                    <li class="d-flex "><i class="fa fa-map-marker-alt"></i><span>Anim pariatur Anim pariatur Anim pariatur cliche reprehenderit, enim eiusmod </span></li>
+
+                    <li><i class="fa fa-mobile-alt"></i><span class="d-inline-flex">Phone: (+234) 9028950691<br>
+                            Mobile: (+63) 555 0100<br>
+                            Fax: (+63) 555 0101</span>
+                    </li>
+                    <li><i class="fa fa-envelope"></i><span>info@example.com</span></li>
+
+                </ul>
+            </div>
+
+
+                <h4 class="mb-sm-3">Follow Us</h4>
+                <div class="contact-social-bx">
+                    <a href="#" class="btn btn-outline-dark" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="btn btn-outline-dark" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="btn btn-outline-dark" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="btn btn-outline-dark" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="" class="btn btn-outline-dark" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <!--
+                    <a href="" class="btn btn-outline-dark" target="_blank"><i class="fab fa-telegram"></i></a>
+					-->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 11. FOOTER -->
+<footer class="total-footer">
+
+    <div class="top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-links-box">
+                        <a href=""><div class="navbar-brand">SPACEFLEX</div></a>
+                        
+                        
+                        <div class="basic-info">
+
+                            <a href="https://goo.gl/maps/7cuXHAtXems" target="_blank"><i class="flaticon-placeholder-3 "></i>&nbsp;&nbsp;2457 Rd Opposite European Quarters</a>
+
+                            <a href=""><i class="fa fa-phone"></i>&nbsp;+234 9028950691</a>
+
+
+                            <a href="https://mailpraiseudeh@gmail.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;mailpraiseudeh@gmail.com</a>
+
+                        </div>
+
+                        <div class="footer-social-links">
+                            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="fab fa-telegram"></i></a>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                    <div class="footer-links-box">
+                        <div class="footer-header-box">
+                            <h6 class="footer-header">Useful links</h6>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="">Domain</a></li>
+                                <li><a href="">Hosting</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="javascript:;">Contact&nbsp;Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                    <div class="footer-links-box">
+                        <div class="footer-header-box">
+                            <h6 class="footer-header">Support</h6>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="">Product Support</a></li>
+                                <li><a href="">Community</a></li>
+                                <li><a href="">Live Chat</a></li>
+                                <li><a href="">Report Abuse</a></li>
+                                <li class="dis"><a href="">Privacy Policy</a></li>
+                                <li class="dis"><a href="">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <div class="footer-links-box">
+                        <div class="footer-header-box">
+                            <h6 class="footer-header">Account</h6>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="login.html">My Account</a></li>
+                                <li><a href="register.html">Create Account</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-links-box">
+                        <div class="footer-header-box">
+                            <h6 class="footer-header">News Letter</h6>
+                        </div>
+                        <p class="text-capitalize m-b20" style="color: #aaa">Weekly Breaking news analysis and updates on latest versions.</p>
+
+                        <form class="subscription-form" action="" method="post">
+                            <div class="input-group">
+                                <input name="email" required="required" class="form-control" placeholder="Your Email Address" type="email">
+                                <span class="input-group-btn">
+											<button name="submit" value="Submit" type="submit" class="btn "><i class="fa fa-arrow-right"></i></button>
+                                    </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bottom-footer-main-area">
+        <div class="container">
+            <div class="bottom-footer">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copy-text">
+                            <p>&copy;&nbsp;<script>
+
+                                var today = new Date();
+                                var dd = String(today.getDate()).padStart(2, '0');
+                                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                                var yyyy = today.getFullYear();
+
+                                today = yyyy;
+                                document.write(today);/*
+                                    var then = new Date(2010, 0, 1);  // The 1st day of the 1st month of 2010
+                                    var later = new Date(2019, 11, 2, 17, 10, 30); // Same day, at 5:10:30pm, local time
+                                    var now = new Date();          // The current date and time
+                                    var elapsed = now - then;      // Date subtraction: interval in milliseconds
+
+
+                                    document.write(later.getFullYear());             // => 2010
+                                    later.getMonth()               // => 0: zero-based months
+                                    later.getDate()                // => 1: one-based days
+                                    later.getDay()                 // => 5: day of week.  0 is Sunday 5 is Friday.
+                                    later.getHours()               // => 17: 5pm, local time
+                                    later.getUTCHours()            // hours in UTC time; depends on timezone
+                                    later.toString()               // => "Fri Jan 01 2010 17:10:30 GMT-0800 (PST)"
+                                    later.toUTCString()            // => "Sat, 02 Jan 2010 01:10:30 GMT"
+                                    later.toLocaleDateString()     // => "01/01/2010"
+                                    later.toLocaleTimeString()     // => "05:10:30 PM"
+                                    later.toISOString()            // => "2010-01-02T01:10:30.000Z"; ES5 only
+*/
+                            </script>&nbsp;<a href="Index.html" target="_self">SPACEFLEX</a></p>
+                        </div>
+                        <div class="policy-text">
+                            <p class="pol"><a href="">Privacy&nbsp;Policy</a></p>
+                            <p><a href="">Terms &amp; Conditions</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="spinner-wrapper">
+    <div class="spinner"></div>
+</div>
+
+
+<a href="#bg" class="kt-scrolltop" id="button"><i class="fa fa-angle-up"></i></a>
+
+
+
+
+
+
+
+
+
+
+<script src="Bootstrap/Bootstrap4/bootstrap/js/jquery-3.1.1.min.js"></script>
+<!--<script src="vendors/MDB/js/popper.js" type="text/javascript"></script>-->
+<script src="Bootstrap/Bootstrap4/bootstrap/js/bootstrap.min.js"></script>
+<!--<script src="vendors/MDB/js/mdb.js" type="text/javascript"></script>-->
+
+
+<script src="vendors/slick-1.8.1/slick/slick.min.js"></script>
+<script src="granim.js/dist/granim.js"></script>
+<script src="js/main.js"></script>
+
+<script src="vendors/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
+<script src="vendors/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
+<script src="tippy.js/dist/tippy.umd.js" type="text/javascript"></script>
+<script src="vendors/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+
+<script src="vendors/counter/waypoints-min.js" type="text/javascript"></script>
+<script src="vendors/counter/counterup.min.js" type="text/javascript"></script>
+<script src="wow/wow.js"></script>
+<script src="vendors/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+
+<script>
+    new WOW().init();
+</script>
+
+
+<script>
+
+    jQuery(window).on("load", function (e) {
+        jQuery('.counter').counterUp({
+            delay: 10,
+            time: 3000
+        });
+    });
+
+
+
+    var btn = $('#button');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show').fadeIn(1000);
+        }else{
+            btn.removeClass('show').fadeOut(1000);
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+    });
+</script>
+
+
+<script>
+
+    $(window).on("load", function () {
+        setTimeout(function () {
+            jQuery('.spinner-wrapper').remove();
+
+        },1500);
+
+        /* Contact Form
+    * ------------------------------------------------------ */
+
+
+            /* local validation */
+            $('#contactForm').validate({
+
+                /* submit via ajax */
+                submitHandler: function(form) {
+
+                    var sLoader = $('.submit-loader');
+
+                    $.ajax({
+
+                        type: "POST",
+                        url: "inc/sendEmail.php",
+                        data: $(form).serialize(),
+                        beforeSend: function() {
+
+                            sLoader.slideDown("slow");
+
+                        },
+                        success: function(msg) {
+
+                            // Message was sent
+                            if (msg == 'OK') {
+                                sLoader.slideUp("slow");
+                                $('.message-warning').fadeOut();
+                                $('#contactForm').fadeOut();
+                                $('.message-success').fadeIn();
+                            }
+                            // There was an error
+                            else {
+                                sLoader.slideUp("slow");
+                                $('.message-warning').html(msg);
+                                $('.message-warning').slideDown("slow");
+                            }
+
+                        },
+                        error: function() {
+
+                            sLoader.slideUp("slow");
+                            $('.message-warning').html("Something went wrong. Please try again.");
+                            $('.message-warning').slideDown("slow");
+
+                        }
+
+                    });
+                }
+
+            });
+
+    })
+
+</script>
+<script src="js/plugins.js"></script>
+
+<script src="vendors/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
+
+<script src="active.js"></script>
+
+
+<script src="vendors/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+
+</body>
+</html>

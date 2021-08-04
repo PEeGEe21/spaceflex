@@ -1,0 +1,79 @@
+body{
+    background: #4e555b;
+}
+
+
+.login2-box {
+    top: 50%;
+    position: absolute;
+    left:50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.login2-box h2{
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.login-btn{
+    width:100%;
+}
+
+.login2-box .btn:hover{
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.text{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login-btn-link{
+    margin-right: 8px;
+    color: steelblue;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.login-btn-link2{
+    padding-right:20px;
+    padding-left:20px;
+    color: steelblue;
+}
+
+
+.login2-box a{
+    text-decoration: none;
+}
+
+input[type="text"]{
+    margin-bottom: 15px;
+}
+
+input[type="password"]{
+    margin-bottom: 15px;
+}
+
+.form-group{
+    display: inline-flex;
+}
+
+.login-icons{
+    font-size: 25px;
+    padding-top:10px;
+    padding-right:10px;
+}
+
+
+@media only screen and (max-width: 575px) {
+    .login2-box {
+
+        width:300px;
+
+    }
+}

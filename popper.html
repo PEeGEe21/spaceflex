@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial</title>
+
+    <link href="vendors/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="vendors/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+	<link href="vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
+    
+    <link href="vendors/calendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+
+    <link href="Bootstrap/Bootstrap4/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="tippy.js/dist/svg-arrow.css" type="text/css" rel="stylesheet">
+    <link href="tippy.js/dist/backdrop.css" type="text/css" rel="stylesheet">
+    <link href="tippy.js/dist/border.css" type="text/css" rel="stylesheet">
+    <link href="tippy.js/dist/tippy.css" type="text/css" rel="stylesheet">
+    <link href="vendors/toastr/build/toastr.css" rel="stylesheet"/>
+    <link href="vendors/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+        @import url("tippy.js/dist/svg-arrow.css");
+
+        .widget-card .wc-title{
+        font-size:16px;
+        line-height:16px;
+        margin:0;
+        color:#fff;
+        font-weight:500;
+    }
+
+    .widget-box{
+	background-color: #fff;
+	box-shadow:0 3px 10px 0px rgba(0,0,0,.08);
+	border-radius: 4px;
+	height: 100%;
+}
+.widget-box .widget-inner{
+	padding:30px;
+}
+.widget-box .wc-title{
+	border-bottom:1px solid rgba(0,0,0,0.05);
+	padding:20px 30px;
+}
+.widget-box .wc-title h4{
+	font-size:18px;
+	line-height:18px;
+	margin:0;
+	color:#333;
+	font-weight:500;
+}
+
+@media only screen and (max-width: 767px) {
+	.widget-box .widget-inner {
+		padding: 15px;
+	}
+	.fc-toolbar button{
+		font-size: 16px;
+		padding: 8px 10px;
+	}
+	.widget-box .wc-title{
+		padding: 15px 15px;
+	}
+	.widget-box .wc-title h4 {
+		font-size: 16px;
+    }
+}
+    </style>
+</head>
+<body>
+<!--
+<button id="button" class="my-button" data-tippy-content="Tooltip" data-tippy-arrow="true">My button</button>
+-->
+<button class="my-button" data-toggle="tooltip" aria-describedby="tooltip" data-placement="top"  title='tooltip on hover<br><a href="">yesstyle</a>' data-html="true" data-offset="0, 8">My button</button>
+<span id="sticker"></span>
+
+<button type="button" data-toggle="modal" data-target="#kt_modal_1">Modal 1</button>
+<button type="button" data-toggle="modal" data-target="#kt_modal_2">Modal 2</button>
+<button type="button" data-toggle="modal" data-target="#kt_modal_3">Modal 3</button>
+<button type="button" data-toggle="modal" data-target="#kt_modal_4">Modal 4</button>
+<button type="button" data-toggle="modal" data-target="#kt_modal_5">Modal 5</button>
+<button type="button" data-toggle="modal" data-target="#kt_modal_6">Modal 6</button>
+<span class="counter">1,234,567</span>
+
+<form>
+
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Minimum Setup</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <select class="form-control kt-selectpicker">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Placeholder</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <select class="form-control kt-selectpicker" title="Choose one of the following...">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Selected Text</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <select class="form-control kt-selectpicker" title="Choose one of the following...">
+            <option title="Combo 1">Hot Dog, Fries and a Soda</option>
+            <option title="Combo 2" selected>Burger, Shake and a Smile</option>
+            <option title="Combo 3">Sugar, Spice and all things nice</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Custom Content</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <select class="form-control kt-selectpicker">
+            <option data-content="<span class='btn btn-success d-inline'>Relish</span>">Mustard</option>
+            <option data-content="<span class='btn btn-primary d-inline'>Ketchup</span>">Ketchup</option>
+            <option data-content="<span class='kt-badge kt-badge--brand kt-badge--inline kt-badge--rounded'>Relish</span>">Relish</option>
+            <option data-content="<span class='kt-badge kt-badge--danger kt-badge--inline kt-badge--rounded'>Chili</span>">Chili</option>
+        </select>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Subtext</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <select class="form-control kt-selectpicker">
+            <option data-subtext="French's">Mustard</option>
+            <option data-subtext="Heinz">Ketchup</option>
+            <option data-subtext="Sweet">Relish</option>
+        </select>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Multiple Select</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <select class="form-control kt-selectpicker" multiple>
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+    </div>
+</div>
+
+
+
+<div class="form-group row">
+    <label class="col-form-label col-lg-3 col-sm-12">Minimum Setup</label>
+    <div class="col-lg-4 col-md-9 col-sm-12">
+        <input type="text" class="form-control" id="kt_datepicker_1" readonly placeholder="Select date" />
+    </div>
+</div>
+
+<div class="form-group row">
+        <label class="col-form-label col-lg-3 col-sm-12">Enable Helper Buttons</label>
+        <div class="col-lg-4 col-md-9 col-sm-12">
+            <div class="input-group date">
+                <input type="text" class="form-control" readonly value="05/20/2017" id="kt_datepicker_3" />
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="la la-calendar"></i>
+                    </span>
+                </div>
+            </div>
+            <span class="form-text text-muted">Enable clear and today helper buttons</span>
+        </div>
+    </div>
+</form>
+
+<button type="button" class="btn btn-secondary" id="kt_touchspin_1">Close</button>
+<button type="button" class="btn btn-primary" id="btnBlock">BlockUi</button>
+<div id="login">
+    processing...
+</div>
+
+<button type="button" id="tippybutton" class="btn btn-info">tippy</button>
+
+
+<!--
+<div class="modal fade" id="kt_modal_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Popover in a modal</h5>
+                    <p>This <a href="#" role="button" data-toggle="kt-popover" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                    <hr>
+                    <h5>Tooltips in a modal</h5>
+                    <p><a href="#" class="tooltip-test" data-toggle="kt-tooltip" title="Tooltip">This link</a> and <a href="#" data-toggle="kt-tooltip" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+<!--begin::Modal-->
+<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end::Modal-->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_1_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="kt-scroll" data-scroll="true" data-height="200">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end::Modal-->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end::Modal-->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Popover in a modal</h5>
+                    <p>This <a href="#" role="button" data-toggle="kt-popover" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                    <hr>
+                    <h5>Tooltips in a modal</h5>
+                    <p><a href="#" class="tooltip-test" data-toggle="kt-tooltip" title="Tooltip">This link</a> and <a href="#" data-toggle="kt-tooltip" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end::Modal-->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end::Modal-->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end::Modal-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="kt_modal_6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<button id="document">sweetalert</button>
+
+<!--
+<div data-notify="container" id="not" class="alert alert-success m-alert animated bounce" role="alert" data-notify-position="top-right" style="display: inline-block; margin: 0px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 10000; top: 30px; right: 30px; animation-iteration-count: 1;"><button type="button" aria-hidden="false" class="close" data-notify="dismiss" style="position: absolute; right: 10px; top: 5px; z-index: 100002;"></button><span data-notify="icon"></span><span data-notify="title"></span><span data-notify="message">New order has been placed</span><a href="#" target="_blank" data-notify="url"></a></div>
+-->
+<!-- <button class="btn btn-outline-info" data-toggle="tiptooltip" aria-describedby="button" id="button" data-tippy-content="Tooltip">button</button>
+ -->
+<button id="tippybutton" data-tippy-content="tooltip" onclick="toastr.info('Hi')">tippybutton</button>
+
+
+<!--<div class="my-popper" id="tooltip" role="" data-popper-placement="right">
+</div>-->
+
+
+<!--<div class="my-popper" id="tooltip" role="tooltip" data-popper-placement="right">
+    My tooltip
+    <div id="arrow" data-popper-arrow></div>
+</div>-->
+
+<main class="ttr-wrapper">
+    <div class="container-fluid">
+        <div class="db-breadcrumb">
+            <h4 class="breadcrumb-title">List Views Calendar</h4>
+            <ul class="db-breadcrumb-list">
+                <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                <li>List Views Calendar</li>
+            </ul>
+        </div>	
+        <div class="row">
+            <!-- Your Profile Views Chart -->
+            <div class="col-lg-12 m-b30">
+                <div class="widget-box">
+                    <div class="wc-title">
+                        <h4>List Views Calendar</h4>
+                    </div>
+                    <div class="widget-inner">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Your Profile Views Chart END-->
+        </div>
+    </div>
+</main>
+
+
+
+<script src="Bootstrap/js/jquery-3.1.1.min.js"></script>
+        
+        <script src="Bootstrap/Bootstrap4/bootstrap/js/bootstrap.min.js"></script>
+        <!--
+<script src="Bootstrap/Bootstrap4/bootstrap/js/jquery-3.1.1.min.js"></script>
+-->
+<script src="popper.js/dist/umd/popper.min.js"></script>
+
+<script src="tippy.js/dist/tippy.umd.js"></script>
+<script src="vendors/toastr/toastr.js"></script>
+<script src="tooltip.js/dist/umd/tooltip.min.js"></script>
+<!--
+<script src="Bootstrap/Bootstrap4/bootstrap/js/bootstrap.min.js"></script>
+-->
+<script src="vendors/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+
+<script src="vendors/bootstrap-notify/bootstrap-notify.js"></script>
+<script src="vendors/bootstrap-select/dist/js/bootstrap-select.js"></script>
+<script src="vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+<script src="vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="vendors/block-ui/jquery.blockUI.js"></script>
+
+<script src="vendors/widgets/bootstrap-switch.js" type="text/javascript"></script>
+<script src="vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
+<script src="vendors/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="vendors/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+<script src="vendors/custom/components/vendors/bootstrap-timepicker/init.js" type="text/javascript"></script>
+<script src="vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="vendors/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
+<script src="vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
+
+<script src="vendors/calendar/moment.min.js"></script>
+<script src="vendors/calendar/fullcalendar.js"></script>
+
+<script src="Bootstrap/Bootstrap4/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="vendors/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+
+
+<script src="vendors/widgets/bootstrap-select.js" type="text/javascript"></script>
+
+
+<!--
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+-->
+
+
+
+
+
+<script>
+    /*
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip(
+
+        )
+    });
+
+    /*$('#myModal').on('shown.bs.modal'), function(){
+        $('#myInput').trigger('focus')
+    };*/
+
+</script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('.counter').counterUp({
+            delay:10,
+            time:1000
+        });
+       
+
+    });
+
+</script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('#sticker').sticky({
+            topSpacing:0
+        });
+
+        
+    });
+
+</script>
+
+
+<script>
+    jQuery(document).ready(function() {
+  
+      jQuery('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'listDay,listWeek,month'
+        },
+  
+        // customize the button names,
+        // otherwise they'd all just say "list"
+        views: {
+          listDay: { buttonText: 'list day' },
+          listWeek: { buttonText: 'list week' }
+        },
+  
+        defaultView: 'listWeek',
+        defaultDate: '2019-03-12',
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2019-03-01'
+          },
+          {
+            title: 'Long Event',
+            start: '2019-03-07',
+            end: '2019-03-10'
+          },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2019-03-09T16:00:00',
+            description: 'Lorem ipsum dolor sit ncididunt ut labore',
+            className: "btn-danger"
+          },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2019-03-16T16:00:00'
+          },
+          {
+            title: 'Conference',
+            start: '2019-03-11',
+            end: '2019-03-13'
+          },
+          {
+            title: 'Meeting',
+            start: '2019-03-12T10:30:00',
+            end: '2019-03-12T12:30:00'
+          },
+          {
+            title: 'Lunch',
+            start: '2019-03-12T12:00:00'
+          },
+          {
+            title: 'Meeting',
+            start: '2019-03-12T14:30:00'
+          },
+          {
+            title: 'Happy Hour',
+            start: '2019-03-12T17:30:00'
+          },
+          {
+            title: 'Dinner',
+            start: '2019-03-12T20:00:00'
+          },
+          {
+            title: 'Birthday Party',
+            start: '2019-03-13T07:00:00'
+          },
+          {
+            title: 'Click for Google',
+            url: 'http://google.com/',
+            start: '2019-03-28'
+          }
+        ]
+      });
+  
+    });
+  
+  </script>
+
+
+
+<script>
+
+
+
+
+    /*$tippy('#button', {
+        content: 'Tooltip',
+        arrow: true,
+        delay: [1000, 200],
+    });*/
+/*
+    $(function () {
+        $('[data-tippy-content="Tooltip"]').tippy()
+    });
+    */
+    jQuery('#document').click(function($){
+        swal.fire({
+                position: 'top-end',
+                icon:'success',
+                title: "Oops....",
+                text: "Something went wrong",
+                footer: '<a href>why do i have this issue?</a>',
+                showCloseButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                showClass: {
+                    popup: 'animated fadeInDown faster'
+                },
+                hideClass: {
+                    popup: 'animated fadeOutUp faster'
+                }
+                
+                
+            });
+
+     });
+
+    
+        
+
+/*
+        swal.fire({
+                title: "Title",
+                text: "Your message",
+                
+            });*/
+    
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+};
+</script>
+
+
+<script>
+/*
+    var reference = document.querySelector('.my-button');
+    var popper = document.querySelector('.my-popper');
+    var anotherPopper = new Popper(
+        reference,
+        popper,
+        {
+            // popper options here
+            arrow: true,
+            delay: [1000, 200],
+            trigger: 'focus',
+            offset: [0, 8],
+        }
+    );
+
+    $('.kt-selectpicker').on("click", function () {
+        
+
+    });
+
+*/
+
+</script>
+
+
+
+</body>
+</html>

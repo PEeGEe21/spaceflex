@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+
+    <style>
+        
+        #email_label{
+            transition: 0.4s ease-in-out;
+        }
+        
+        #name_label{
+            transition: 0.4s ease-in-out;
+        }
+        .form-field {
+            clear: both;
+            padding: 10px;
+            width: 350px;
+        }
+
+        .form-field label {
+            float: left;
+            width: 150px;
+            text-align: right;
+        }
+
+        .form-field input {
+            float: right;
+            width: 150px;
+            text-align: left;
+        }
+
+        #submit {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<ul id="theList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+
+
+<a href="https://google.com" id="exLink" class="link">This is a link</a>
+
+
+<h1>A Basic Form</h1>
+<hr>
+<form action="#">
+    <fieldset>
+        <legend>Form Information</legend>
+        <div class="form-field">
+            <label for="username" id="name_label">Name:</label>
+            <input type="text" id="username" name="username" onclick="wog()">
+        </div>
+
+        <div class="form-field">
+            <label for="email" id="email_label">E-mail</label>
+            <input type="text" id="email" name="email" onclick="tog()">
+        </div>
+
+        <div class="form-field">
+            <input id="submit" type="submit" name="submit" value="send form">
+        </div>
+    </fieldset>
+</form>
+
+
+                                           
+    
+    
+    
+    
+    <script>
+        function tog(){
+            document.getElementById('email_label').style.fontSize= '12px';
+            document.getElementById('name_label').style.fontSize= '18px';
+            
+        }
+        
+        
+        function wog(){
+            document.getElementById('email_label').style.fontSize='18px';
+            document.getElementById('name_label').style.fontSize='12px'
+            
+        }
+        
+        function a(){
+            b();
+            
+        }
+        
+       
+        
+        function b(){
+            console.log('I am The Boss');
+        }
+        
+        a();
+        
+        
+        function c(){
+            var myVar = 9;
+        }
+        
+       
+        
+        function d(){
+            var myVar= 2;
+            c();
+        }
+        
+        var myVar= 1;
+        d();
+        
+        
+        /*var a ="Hello World";
+        
+        console.log(a);
+        
+        console.log(a);*/
+    </script>
+
+    
+    <script>
+    
+    
+    
+    </script>
+    
+    
+    
+<script>
+
+
+
+
+    $(document).ready(function () {
+        $("#theList").append("<li>Four</li>");
+        $("#theList li").each(function () {
+            var existingText = $(this).text().substr(7,1);
+            $(this).text("Item"  + existingText);
+        })
+        
+    });
+
+    $(document).ready(function () {
+        alert($("#exLink").attr("href"));
+    });
+
+    $(document).ready(function () {
+        alert("Hello");
+    });
+
+</script>
+
+
+<script>
+    /*$(document).ready(function() {
+        $("form").submit(function() {
+            alert("You submitted the form");
+            return false;
+        });
+    });*/
+
+    $(document).ready(function() {
+        $("form").submit(function(event) {
+            if ($("#username").val() == "") {
+                alert("Name can’t be blank");
+                event.preventDefault();
+                return false;
+            }
+        });
+    });
+</script>
+</body>
+</html>

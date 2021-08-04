@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML, Meta Tags, Metadata" />
+    <meta name="description" content="SPACEFLEX home page." />
+    <meta name="revised" content="SPACEFLEX, 7/10/2019" />
+    <!--<meta http-equiv="refresh" content="86400" />
+    -->
+    <meta name="author" content="Udeh PraiseGod" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css" />
+
+    <!-- STYLESHEET -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="registercss.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body id="bg" class="kt-scrolltop--on">
+    <!-- 1. Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-header">
+          <div class="row">
+            <div class="col-12">
+              <div class="top-link-left">
+                <p>
+                  <a href="mailto:mailpraiseudeh@gmail.com"
+                    ><i class="fa fa-envelope"></i
+                    >&nbsp;mailpraiseudeh@gmail.com</a
+                  >
+                </p>
+                <p class="contact">
+                  <a href="tel:+2349028950691"
+                    ><i class="fa fa-phone"></i>&nbsp;+234&nbsp;9028950691</a
+                  >
+                </p>
+              </div>
+              <div class="top-link-right">
+                <p>
+                  <a href=""
+                    ><i class="fa fa-video-camera"></i> Live&nbsp;Chat</a
+                  >
+                </p>
+                <p class="contact-login">
+                  <a href="login.html"
+                    ><i class="fa fa-sign-in"></i>&nbsp;Login</a
+                  >
+                </p>
+                <p><a href="">Report</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="header sticky-top">
+      <div class="navbar navbar-expand-lg navbar-dark sticky-top" style="">
+        <div class="container">
+          <a href="Index.html"><div class="navbar-brand">SPACEDRIVE</div></a>
+
+          <div class="top-icon">
+            <a
+              href="#"
+              class="animated infinite pulse"
+              style=""
+              data-wow-iteration="2000"
+              ><i class="fa fa-shopping-cart"></i
+            ></a>
+            <a
+              href="#"
+              class="animated infinite pulse"
+              style=""
+              data-wow-iteration="2000"
+              ><i class="fa fa-bell"></i
+            ></a>
+            <a
+              href="#"
+              class="animated infinite pulse"
+              style=""
+              data-wow-iteration="2000"
+              onclick="openSearch()"
+              >LOGIN</a
+            >
+          </div>
+
+          <input
+            class="menu-btn"
+            type="checkbox"
+            id="menu-btn"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          />
+          <label class="menu-icon" for="menu-btn"
+            ><span class="navicon"></span
+          ></label>
+
+          <!--
+            <button class="navbar-toggler menuicon" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+			-->
+
+          <div
+            class="collapse navbar-collapse menu-links"
+            id="navbarNavDropdown"
+          >
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item mr-3">
+                <a href="Index.html" class="nav-link"
+                  ><i class="fa fa-home"></i>&nbsp;Home</a
+                >
+              </li>
+              <li class="nav-item mr-3 dropdown">
+                <a href="javascript:void(0);" class="nav-link"
+                  >Domain&nbsp;<i class="fa fa-caret-down"></i
+                ></a>
+                <ul
+                  class="dropdown-menu"
+                  style="
+                    width: 20em;
+                    top: auto;
+                    left: 0px;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    min-width: 10em;
+                    max-width: 20em;
+                  "
+                >
+                  <li>
+                    <a href="register.html" class="dropdown-item"
+                      >Create Account</a
+                    >
+                  </li>
+                  <li><a href="login.html" class="dropdown-item">Login</a></li>
+                  <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item mr-3 dropdown">
+                <a href="javascript:void(0);" class="nav-link"
+                  >Hosting&nbsp;<i class="fa fa-caret-down"></i
+                ></a>
+                <ul
+                  class="dropdown-menu"
+                  style="
+                    width: 20em;
+                    top: auto;
+                    left: 0px;
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    min-width: 10em;
+                    max-width: 20em;
+                  "
+                >
+                  <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                  <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                  <li><a href="" class="dropdown-item">Lorem Ipsum</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item mr-3">
+                <a href="" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a href="" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="everything better">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-lg-6">
+            <div class="reg-img-box" style="width: 100%; height: 500px;">
+              <img src="" alt="" class="reg-img" />
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6">
+            <div
+              class="panel-group"
+              id="accordion"
+              role="tablist"
+              aria-multiselectable="true"
+            >
+              <div class="panel panel-default">
+                <div class="" data-parent="#accordion" aria-labelledby="">
+                  <div class="panel-body">
+                    <div class="tab" role="tabpanel">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation">
+                          <a
+                            href="#Sect01"
+                            role="tab"
+                            data-toggle="tab"
+                            aria-selected="true"
+                            id="active"
+                            onclick="getElementById('active').style.fontSize='18px';
+                                                                       getElementById('active_sec').style.fontSize='10px'"
+                          >
+                            Register</a
+                          >
+                        </li>
+                        <li role="presentation">
+                          <a
+                            href="#Sect02"
+                            role="tab"
+                            data-toggle="tab"
+                            aria-selected="false"
+                            id="active_sec"
+                            onclick="getElementById('active_sec').style.fontSize='18px'; getElementById('active').style.fontSize='10px'"
+                          >
+                            Login</a
+                          >
+                        </li>
+                      </ul>
+                      <!-- Tab panes -->
+                    </div>
+                    <div class="tab" role="tabpanel">
+                      <!-- Tab Content -->
+                      <div class="tab-content">
+                        <div
+                          role="tabpanel"
+                          class="tab-pane fade show active"
+                          id="Sect01"
+                        >
+                          <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                              <div class="container">
+                                <form class="register-box">
+                                  <h2 class="sign-up">Create An Account</h2>
+
+                                  <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                      <label for="inputName1"
+                                        >Surname <span>*</span></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputName1"
+                                        placeholder=""
+                                      />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="inputName2"
+                                        >Last Name <span>*</span></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputName2"
+                                        placeholder=""
+                                      />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="inputName3"
+                                        >Other Names <span>*</span></label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inputName3"
+                                        placeholder=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                      <label for="phoneNumber"
+                                        ><i class="fa fa-phone"></i
+                                        >&nbsp;Phone</label
+                                      >
+                                      <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="phoneNumber"
+                                        placeholder=""
+                                      />
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                      <label for="inputEmail"
+                                        ><i class="fa fa-envelope"></i
+                                        >&nbsp;Email <span>*</span></label
+                                      >
+                                      <input
+                                        type="email"
+                                        class="form-control"
+                                        id="inputEmail"
+                                        placeholder=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="password"
+                                        ><i class="fa fa-lock"></i
+                                        >&nbsp;Password <span>*</span></label
+                                      >
+                                      <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        placeholder=""
+                                        required="required"
+                                      />
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                      <label for="confirmPassword"
+                                        ><i class="fa fa-lock"></i>&nbsp;Confirm
+                                        Password <span>*</span></label
+                                      >
+                                      <input
+                                        type="password"
+                                        class="form-control"
+                                        id="confirmPassword"
+                                        placeholder=""
+                                        required="required"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <button type="submit" class="btn btn-info">
+                                    Submit
+                                  </button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- LOGINBOX -->
+                        <div role="tabpanel" class="tab-pane fade" id="Sect02">
+                          <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                              <div class="container">
+                                <div
+                                  class="login-bx"
+                                  style="visibility: visible;"
+                                >
+                                  <form>
+                                    <div class="form-row">
+                                      <div class="form-group col-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id=""
+                                          placeholder="Email or Username"
+                                          autocomplete=""
+                                          required="required"
+                                        />
+                                      </div>
+
+                                      <div class="form-group col-12">
+                                        <input
+                                          type="password"
+                                          class="form-control"
+                                          id=""
+                                          placeholder="Password"
+                                          required="required"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="forgot">
+                                      <a href="#">Forgot password?</a>
+                                    </div>
+                                    <br />
+
+                                    <div style="text-align: center;">
+                                      <button
+                                        type="submit"
+                                        class="btn btn-info login-btn"
+                                      >
+                                        Login <i class="fa fa-sign-in"></i>
+                                      </button>
+                                    </div>
+
+                                    <div class="text">
+                                      <p>Or login with</p>
+
+                                      <a href="" class="login-btn-link"
+                                        ><i class="fa fa-facebook-square"></i
+                                      ></a>
+                                      <a href="" class="login-btn-link2"
+                                        ><i
+                                          class="fa fa-google-plus-official"
+                                        ></i
+                                      ></a>
+                                      <a href="" class="login-btn-link3"
+                                        ><i class="fa fa-github"></i
+                                      ></a>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Accordion wrapper-->
+    <div
+      class="accordion md-accordion accordion-3 z-depth-1-half"
+      id="accordionEx194"
+      role="tablist"
+      aria-multiselectable="true"
+    >
+      <ul class="list-unstyled d-flex justify-content-center pt-5 red-text">
+        <li><i class="fas fa-anchor mr-3 fa-2x" aria-hidden="true"></i></li>
+        <li><i class="far fa-life-ring mr-3 fa-2x" aria-hidden="true"></i></li>
+        <li><i class="far fa-star fa-2x" aria-hidden="true"></i></li>
+      </ul>
+
+      <h2 class="text-center text-uppercase red-text py-4 px-3">
+        Hello my friends, I am the nicest accordion!
+      </h2>
+
+      <hr class="mb-0" />
+
+      <!-- Accordion card -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading4">
+          <a
+            data-toggle="collapse"
+            data-parent="#accordionEx194"
+            href="#collapse4"
+            aria-expanded="true"
+            aria-controls="collapse4"
+          >
+            <h3 class="mb-0 red-text">
+              How awesome accordion I am?
+              <div class="animated-icon1 float-right mt-1">
+                <span></span><span></span><span></span>
+              </div>
+            </h3>
+          </a>
+        </div>
+
+        <!-- Card body -->
+        <div
+          id="collapse4"
+          class="collapse show"
+          role="tabpanel"
+          aria-labelledby="heading4"
+          data-parent="#accordionEx194"
+        >
+          <div class="card-body pt-0">
+            <p>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Accordion card -->
+
+      <!-- Accordion card -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading5">
+          <a
+            class="collapsed"
+            data-toggle="collapse"
+            data-parent="#accordionEx194"
+            href="#collapse5"
+            aria-expanded="false"
+            aria-controls="collapse5"
+          >
+            <h3 class="mb-0 red-text">
+              You're the greatest accordion!
+              <div class="animated-icon1 float-right mt-1">
+                <span></span><span></span><span></span>
+              </div>
+            </h3>
+          </a>
+        </div>
+
+        <!-- Card body -->
+        <div
+          id="collapse5"
+          class="collapse"
+          role="tabpanel"
+          aria-labelledby="heading5"
+          data-parent="#accordionEx194"
+        >
+          <div class="card-body pt-0">
+            <p>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Accordion card -->
+
+      <!-- Accordion card -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading6">
+          <a
+            class="collapsed"
+            data-toggle="collapse"
+            data-parent="#accordionEx194"
+            href="#collapse6"
+            aria-expanded="false"
+            aria-controls="collapse6"
+          >
+            <h3 class="mb-0 red-text">
+              Thank you my dear!
+              <div class="animated-icon1 float-right mt-1">
+                <span></span><span></span><span></span>
+              </div>
+            </h3>
+          </a>
+        </div>
+
+        <!-- Card body -->
+        <div
+          id="collapse6"
+          class="collapse"
+          role="tabpanel"
+          aria-labelledby="heading6"
+          data-parent="#accordionEx194"
+        >
+          <div class="card-body pt-0">
+            <p>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Accordion card -->
+    </div>
+    <!--/.Accordion wrapper-->
+
+    <a href="#bg" class="kt-scrolltop" id="button"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <!-- 9. FOOTER -->
+    <footer class="total-footer">
+      <div class="top-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-links-box">
+                <a href=""><div class="navbar-brand">SPACEDRIVE</div></a>
+                <div class="basic-info">
+                  <a href="https://goo.gl/maps/7cuXHAtXems" target="_blank"
+                    ><i class="fa fa-map-marker"></i>&nbsp;&nbsp;2457 Rd
+                    Opposite European Quarters</a
+                  >
+
+                  <a href=""
+                    ><i class="fa fa-phone"></i>&nbsp;+234 9028950691</a
+                  >
+
+                  <a href="https://mailpraiseudeh@gmail.com" target="_blank"
+                    ><i class="fa fa-envelope"></i
+                    >&nbsp;mailpraiseudeh@gmail.com</a
+                  >
+                </div>
+
+                <div class="footer-social-links">
+                  <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                  <a href="" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                  <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  <a href="" target="_blank"><i class="fa fa-telegram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="footer-links-box">
+                <div class="footer-header-box">
+                  <h6 class="footer-header">Useful links</h6>
+                </div>
+                <nav>
+                  <ul>
+                    <li><a href="">Domain</a></li>
+                    <li><a href="">Hosting</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact&nbsp;Us</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="footer-links-box">
+                <div class="footer-header-box">
+                  <h6 class="footer-header">Support</h6>
+                </div>
+                <nav>
+                  <ul>
+                    <li><a href="">Product Support</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Live Chat</a></li>
+                    <li><a href="">Report Abuse</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="footer-links-box">
+                <div class="footer-header-box">
+                  <h6 class="footer-header">Account</h6>
+                </div>
+                <nav>
+                  <ul>
+                    <li><a href="login.html">My Account</a></li>
+                    <li><a href="register.html">Create Account</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-links-box">
+                <div class="footer-header-box">
+                  <h6 class="footer-header">News Letter</h6>
+                </div>
+                <p class="text-capitalize m-b20" style="color: #aaa;">
+                  Weekly Breaking news analysis and updates on latest versions.
+                </p>
+
+                <form class="subscription-form" action="" method="post">
+                  <div class="input-group">
+                    <input
+                      name="email"
+                      required="required"
+                      class="form-control"
+                      placeholder="Your Email Address"
+                      type="email"
+                    />
+                    <span class="input-group-btn">
+                      <button
+                        name="submit"
+                        value="Submit"
+                        type="submit"
+                        class="btn"
+                      >
+                        <i class="fa fa-arrow-right"></i>
+                      </button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-footer-main-area">
+        <div class="container">
+          <div class="bottom-footer">
+            <div class="row">
+              <div class="col-12">
+                <div class="copy-text">
+                  <p>
+                    &copy;&nbsp;2019&nbsp;<a href="Index.html" target="_self"
+                      >SPACEDRIVE</a
+                    >
+                  </p>
+                </div>
+                <div class="policy-text">
+                  <p class="pol"><a href="">Privacy&nbsp;Policy</a></p>
+                  <p><a href="">Terms &amp; Conditions</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="active.js"></script>
+-->
+    <script>
+      var btn = $('#button');
+
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass('show');
+        } else {
+          btn.removeClass('show');
+        }
+      });
+
+      btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+      });
+    </script>
+  </body>
+</html>

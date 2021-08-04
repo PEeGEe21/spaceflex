@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+    .calculator{
+        display: grid;
+    }
+
+    button{
+        width: 100px;
+        height: 60px;
+
+    }
+
+    table{
+        text-align: center;
+        height: 500px;
+    }
+
+    tr{
+        text-align: center;
+    }
+
+
+
+</style>
+<body>
+
+
+
+
+<div class="container">
+
+<table border="1" width="500px" cellspacing="4" cellpadding="5">
+
+    <tr>
+        <td colspan="4"><input type="text" id="result" style="width:100%; height: 100px; text-align: right; overflow: hidden"></td>
+    </tr>
+
+    <tr>
+        <td><button id="divide" onclick="console.log('/')" name="operation">/</button></td>
+        <td><button id="multiply" onclick="console.log('*')" name="operation"> X </button></td>
+        <td colspan="2"><button id="del" onclick="clear()" style="width:100%;" name="operation">DEL </button></td>
+
+    </tr>
+
+    <tr>
+        <td ><button id="btn7" onclick="console.log('7')">7</button></td>
+        <td><button id="btn8" onclick="console.log('8')">8</button></td>
+        <td><button id="btn9" onclick="console.log('9')">9</button></td>
+        <td><button id="subtract" onclick="console.log('-')" name="operation">-</button></td>
+    </tr>
+
+    <tr>
+        <td ><button id="btn4" onclick="console.log('4')">4</button></td>
+        <td><button id="btn5" onclick="console.log('5')">5</button></td>
+        <td><button id="btn6" onclick="console.log('6')">6</button></td>
+        <td><button id="add" onclick="console.log('+')" name="operation">+</button></td>
+    </tr>
+
+    <tr>
+        <td><button id="btn1" onclick="console.log('1')">1</button></td>
+        <td><button id="btn2" onclick="console.log('2')">2</button></td>
+        <td><button id="btn3" onclick="console.log('3')">3</button></td>
+        <td  rowspan="2"><button id="submitBtn" name="operation" onclick="console.log('=')" style="width: 100%;height: 150px">=</button></td>
+    </tr>
+
+    <tr>
+        <td  colspan="2"><button id="btn0" onclick="document.innerHTML('btn0')" style="width: 100%;height: 80px">0</button></td>
+        <td><button id="btnPoint" onclick="console.log('.')">.</button></td>
+    </tr>
+
+</table>
+</div>
+
+
+
+<script>
+
+    var result = document.getElementById('result');
+var submitBtn = document.getElementById('submitBtn');
+var numberOne = document.getElementById('btn1');
+var numberTwo = document.getElementById('btn2');
+var numberThree = document.getElementById('btn3');
+var numberFour = document.getElementById('btn4');
+var numberFive = document.getElementById('btn5');
+var numberSix = document.getElementById('btn6');
+var numberSeven = document.getElementById('btn7');
+var numberEight = document.getElementById('btn8');
+var numberNine = document.getElementById('btn9');
+var numberZero = document.getElementById('btn0');
+var point = document.getElementById('btnPoint');
+var add = document.getElementById('add');
+var multiply = document.getElementById('multiply');
+var subtract = document.getElementById('subtract');
+var divide = document.getElementById('divide');
+
+
+numberZero.addEventListener('click', function(e){
+   /* let operation = document.querySelector('button[name="operation"]:clicked').value;
+
+    if()*/
+
+    result.innerHTML = numberZero;
+} );
+
+
+
+
+submitBtn.add
+
+</script>
+
+
+
+
+
+
+
+<script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
